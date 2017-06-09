@@ -2,8 +2,7 @@
  * Created by Luteh on 08/06/2017.
  */
 import React, { Component } from 'react'
-import { TextInput } from 'react-native'
-import { Card, CardSection, Button } from './common'
+import { Card, CardSection, Button, Input } from './common'
 
 class LoginForm extends Component {
   state = {text: ''}
@@ -12,10 +11,10 @@ class LoginForm extends Component {
     return (
       <Card>
         <CardSection>
-          <TextInput
+          <Input
+            label = {"Email"}
             value={this.state.text}
             onChangeText={text => this.setState({text})}
-            style={{height: 40, width: 100}}
           />
         </CardSection>
 
