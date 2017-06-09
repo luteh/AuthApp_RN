@@ -32,19 +32,11 @@ class App extends Component {
   renderContent () {
     switch (this.state.loggedIn) {
       case true:
-        return (
-          <CardSection>
-            <Button>Log Out</Button>
-          </CardSection>
-        )
+        return <Button>Log Out</Button>
       case false:
         return <LoginForm/>
       default:
-        return (
-          <CardSection>
-            <Spinner size="large"/>
-          </CardSection>
-        )
+        return <Spinner size="large"/>
     }
   }
 
